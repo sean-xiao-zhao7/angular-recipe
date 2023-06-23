@@ -2,5 +2,7 @@
   <h3>{{ ingredient.name }}</h3>
   <p>{{ ingredient.longDescription }}</p>
   <p>{{ ingredient.imageUrl }}</p>
-  <button>Select {{ ingredient.name }}</button>
+  <button (click)="onSelectIngredient(ingredient.name)">
+    Select {{ ingredient.name }}
+  </button>
 </div>

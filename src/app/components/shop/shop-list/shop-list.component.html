@@ -1,4 +1,5 @@
 <app-ingredient-item
   *ngFor="let ingredient of ingredients"
   [ingredient]="ingredient"
+  (ingredientSelectedEE)="onIngredientSelected($event)"
 ></app-ingredient-item>

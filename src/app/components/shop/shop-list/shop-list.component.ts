@@ -9,8 +9,6 @@ import { Ingredient } from 'src/app/models/ingredient';
 export class ShopListComponent implements OnInit {
   ingredients!: Ingredient[];
 
-  constructor() {}
-
   ngOnInit(): void {
     this.ingredients = [
       new Ingredient('Ingredient 1', '', ''),
@@ -18,4 +16,10 @@ export class ShopListComponent implements OnInit {
       new Ingredient('Ingredient 3', '', ''),
     ];
   }
+
+  onIngredientSelected(ingredient: string) {
+    console.log(ingredient);
+  }
+
+  onAddedIngredient(ingredient: Ingredient) {}
 }
