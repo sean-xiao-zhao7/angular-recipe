@@ -11,6 +11,8 @@ import { ShopListEditComponent } from './components/shop/shop-list-edit/shop-lis
 import { IngredientItemComponent } from './components/shop/ingredient-item/ingredient-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
+import { MyIngredientsComponent } from './components/inventory/my-ingredients/my-ingredients.component';
+import { MyIngredientItemComponent } from './components/inventory/my-ingredient-item/my-ingredient-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
     IngredientItemComponent,
     HeaderComponent,
     NavBarComponent,
+    MyIngredientsComponent,
+    MyIngredientItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

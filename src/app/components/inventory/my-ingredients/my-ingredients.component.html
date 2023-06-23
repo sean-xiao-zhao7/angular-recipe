@@ -1,0 +1,10 @@
+<div>
+  <ul>
+    <li *ngFor="let ingredient of myIngredients">
+      <app-my-ingredient-item
+        [ingredient]="ingredient"
+        (onRemoveIngredientEE)="onRemoveIngredient($event)"
+      ></app-my-ingredient-item>
+    </li>
+  </ul>
+</div>
