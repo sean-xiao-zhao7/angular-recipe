@@ -1,5 +1,8 @@
-<app-ingredient-item
-  *ngFor="let ingredient of ingredients"
-  [ingredient]="ingredient"
-  (ingredientSelectedEE)="onIngredientSelected($event)"
-></app-ingredient-item>
+<div>
+  <h2>Shop for ingredients</h2>
+  <app-ingredient-item
+    *ngFor="let ingredient of ingredients"
+    [ingredient]="ingredient"
+    (ingredientSelectedEE)="onIngredientSelected($event)"
+  ></app-ingredient-item>
+</div>
