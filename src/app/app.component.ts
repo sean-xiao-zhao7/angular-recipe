@@ -12,7 +12,7 @@ export class AppComponent {
   section = 'shop';
 
   // user content
-  myIngredients = [];
+  myIngredients: Ingredient[] = [];
   myRecipes = [];
 
   // available contents
@@ -27,7 +27,10 @@ export class AppComponent {
     this.section = section;
   }
 
-  onSelectedIngredient(ingredientName: string) {}
+  onSelectedIngredient(ingredientName: string) {
+    this.myIngredients.push(new Ingredient(ingredientName, '', ''));
+    this.section = 'inventory';
+  }
 
   onAddMyIngredient(ingredient: Ingredient) {}
 
