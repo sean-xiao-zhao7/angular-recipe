@@ -33,7 +33,13 @@ export class AppComponent {
 
   onAddMyIngredient(ingredient: Ingredient) {}
 
-  onRemoveMyIngredient(ingredientName: string) {}
+  onRemoveMyIngredient(ingredientName: string) {
+    const target = this.myIngredients.findIndex(
+      (ingredient) => ingredient.name === ingredientName
+    );
+    this.myIngredients.splice(target, 1);
+    this.section = 'shop';
+  }
 
   onAddMyRecipe(recipe: Recipe) {}
 }

@@ -13,8 +13,6 @@ export class MyIngredientItemComponent implements OnInit {
   ngOnInit(): void {}
 
   onRemoveIngredient(ingredientName: string) {
-    this.onRemoveIngredient(ingredientName);
+    this.onRemoveIngredientEE.emit(ingredientName);
   }
-
-  onAddToRecipe(ingredientName: string) {}
 }
