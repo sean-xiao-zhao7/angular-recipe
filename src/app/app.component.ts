@@ -9,6 +9,7 @@ import { Recipe } from './models/recipe';
 })
 export class AppComponent {
   title = 'Recipe';
+  section = 'shop';
 
   // user content
   myIngredients = [];
@@ -17,6 +18,10 @@ export class AppComponent {
   // available contents
   allIngredients = [];
   allRecipes = [];
+
+  onSelectSection(section: string) {
+    this.section = section;
+  }
 
   onSelectedIngredient(ingredientName: string) {}
 

@@ -1,20 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-header></app-header>
+      <app-header [sectionInput]="section"></app-header>
       <section class="main-section">
         <app-shop-list
           (onSelectedIngredientEE)="onSelectedIngredient($event)"
           [ingredients]="allIngredients"
+          *ngIf="section === 'shop'"
         ></app-shop-list>
-      </section>
-      <section class="main-section">
         <app-my-ingredients
           [myIngredients]="myIngredients"
+          *ngIf="section === 'inventory'"
         ></app-my-ingredients>
-      </section>
-      <section class="main-section">
-        <app-recipe-list [myRecipes]="myRecipes"></app-recipe-list>
+        <app-recipe-list
+          [myRecipes]="myRecipes"
+          *ngIf="section === 'recipe-book'"
+        ></app-recipe-list>
       </section>
     </div>
   </div>
