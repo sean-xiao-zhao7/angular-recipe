@@ -10,13 +10,7 @@ export class ShopListComponent implements OnInit {
   @Output() onSelectedIngredientEE = new EventEmitter<string>();
   @Input() ingredients: Ingredient[] = [];
 
-  ngOnInit(): void {
-    this.ingredients = [
-      new Ingredient('Ingredient 1', '', ''),
-      new Ingredient('Ingredient 2', '', ''),
-      new Ingredient('Ingredient 3', '', ''),
-    ];
-  }
+  ngOnInit(): void {}
 
   onIngredientSelected(ingredientName: string) {
     this.onSelectedIngredientEE.emit(ingredientName);

@@ -16,7 +16,11 @@ export class AppComponent {
   myRecipes = [];
 
   // available contents
-  allIngredients = [];
+  allIngredients = [
+    new Ingredient('Ingredient 1', '', ''),
+    new Ingredient('Ingredient 2', '', ''),
+    new Ingredient('Ingredient 3', '', ''),
+  ];
   allRecipes = [];
 
   onChangeSection(section: string) {
