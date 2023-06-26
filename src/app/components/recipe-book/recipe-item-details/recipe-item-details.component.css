@@ -1,3 +1,9 @@
 h3 {
   margin-top: 0;
 }
+
+div {
+  padding: 1rem;
+  border: solid 1px rgb(221, 221, 221);
+  background-color: rgb(221, 221, 221);
+}
