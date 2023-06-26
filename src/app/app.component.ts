@@ -8,12 +8,12 @@ import { Recipe } from './models/recipe';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Recipe';
+  title = 'My Recipes';
   section = 'shop';
 
   // user content
   myIngredients: Ingredient[] = [];
-  myRecipes = [];
+  myRecipes: Recipe[] = [];
 
   // available contents
   allIngredients = [
@@ -21,7 +21,6 @@ export class AppComponent {
     new Ingredient('Ingredient 2', '', ''),
     new Ingredient('Ingredient 3', '', ''),
   ];
-  allRecipes = [];
 
   onChangeSection(section: string) {
     this.section = section;

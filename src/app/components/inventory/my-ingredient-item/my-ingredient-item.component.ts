@@ -15,4 +15,6 @@ export class MyIngredientItemComponent implements OnInit {
   onRemoveIngredient(ingredientName: string) {
     this.onRemoveIngredient(ingredientName);
   }
+
+  onAddToRecipe(ingredientName: string) {}
 }
