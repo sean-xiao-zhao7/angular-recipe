@@ -10,7 +10,9 @@ export class MyIngredientsComponent implements OnInit {
   @Input() myIngredients: Ingredient[] = [];
   @Output() onRemoveIngredientEE = new EventEmitter<string>();
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.myIngredients);
+  }
 
   onRemoveIngredient(ingredientName: string) {
     this.onRemoveIngredientEE.emit(ingredientName);

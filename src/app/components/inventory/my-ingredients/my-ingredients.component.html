@@ -1,6 +1,7 @@
 <div>
   <h2>My inventory</h2>
-  <ul>
+  <p *ngIf="myIngredients.length <= 0">No ingredients.</p>
+  <ul else>
     <li *ngFor="let ingredient of myIngredients">
       <app-my-ingredient-item
         [ingredient]="ingredient"
