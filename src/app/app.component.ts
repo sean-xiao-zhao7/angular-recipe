@@ -19,7 +19,7 @@ export class AppComponent {
   allIngredients = [];
   allRecipes = [];
 
-  onSelectSection(section: string) {
+  onChangeSection(section: string) {
     this.section = section;
   }
 

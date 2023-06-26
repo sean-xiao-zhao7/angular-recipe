@@ -23,6 +23,7 @@ li a {
   transition: background-color 0.05s;
 }
 
-li a:hover {
+li a:hover,
+li a.active {
   background-color: rgb(221, 221, 221);
 }

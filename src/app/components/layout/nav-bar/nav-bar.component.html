@@ -1,7 +1,26 @@
 <ul>
   <li>
-    <a href="#">Shop</a>
+    <a
+      href="#"
+      [class.active]="sectionInput === 'shop'"
+      (click)="onChangeSection('section')"
+      >Shop</a
+    >
   </li>
-  <li><a href="#">Recipe Book</a></li>
-  <li><a href="#">Inventory</a></li>
+  <li>
+    <a
+      href="#"
+      [class.active]="sectionInput === 'recipe-book'"
+      (click)="onChangeSection('recipe-book')"
+      >Recipe Book</a
+    >
+  </li>
+  <li>
+    <a
+      href="#"
+      [class.active]="sectionInput === 'inventory'"
+      (click)="onChangeSection('inventory')"
+      >Inventory</a
+    >
+  </li>
 </ul>

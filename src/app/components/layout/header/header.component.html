@@ -1,4 +1,7 @@
 <div>
   <h2>Recipe App</h2>
-  <app-nav-bar [sectionInput]="sectionInput"></app-nav-bar>
+  <app-nav-bar
+    [sectionInput]="sectionInput"
+    (onChangeSectionEmitter)="onChangeSection($event)"
+  ></app-nav-bar>
 </div>
