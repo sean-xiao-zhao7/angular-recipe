@@ -39,5 +39,7 @@ export class AppComponent {
     this.myIngredients.splice(target, 1);
   }
 
-  onAddMyRecipe(recipe: Recipe) {}
+  onAddMyRecipe(recipe: Recipe) {
+    this.myRecipes.push(recipe);
+  }
 }

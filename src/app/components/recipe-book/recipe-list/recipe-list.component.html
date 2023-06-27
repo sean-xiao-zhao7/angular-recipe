@@ -7,5 +7,8 @@
     </li>
   </ul>
   <button (click)="onAddNew()" *ngIf="!addNew">Add a new recipe</button>
-  <app-add-recipe *ngIf="addNew"></app-add-recipe>
+  <app-add-recipe
+    *ngIf="addNew"
+    (addRecipeEmitter)="onAddRecipe($event)"
+  ></app-add-recipe>
 </div>

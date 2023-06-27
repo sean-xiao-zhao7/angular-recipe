@@ -19,6 +19,7 @@
         <app-recipe-list
           [myRecipes]="myRecipes"
           *ngIf="section === 'recipe-book'"
+          (newRecipeEmitter)="onAddMyRecipe($event)"
         ></app-recipe-list>
       </section>
     </div>
