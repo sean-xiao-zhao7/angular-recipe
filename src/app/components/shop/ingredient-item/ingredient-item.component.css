@@ -18,3 +18,12 @@ div > button {
   padding: 1rem 0.5rem;
   border: solid 1px gainsboro;
 }
+
+div > button:hover,
+div > button:focus {
+  background-color: rgb(221, 221, 221);
+}
+
+div > button:focus {
+  background-color: antiquewhite;
+}

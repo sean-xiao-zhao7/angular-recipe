@@ -28,7 +28,6 @@ export class AppComponent {
 
   onSelectedIngredient(ingredientName: string) {
     this.myIngredients.push(new Ingredient(ingredientName, '', ''));
-    this.section = 'inventory';
   }
 
   onAddMyIngredient(ingredient: Ingredient) {}
