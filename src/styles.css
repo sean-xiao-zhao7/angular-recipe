@@ -19,3 +19,12 @@ h3 {
 button:hover {
   cursor: pointer;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
