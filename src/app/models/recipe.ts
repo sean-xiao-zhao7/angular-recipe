@@ -6,15 +6,9 @@ export class Recipe {
   public imageUrl: string;
   public ingredients: Ingredient[] = [];
 
-  constructor(
-    name: string,
-    longDescription: string,
-    imageUrl: string,
-    ingredients: Ingredient[]
-  ) {
+  constructor(name: string, longDescription: string, imageUrl: string) {
     this.name = name;
     this.longDescription = longDescription;
     this.imageUrl = imageUrl;
-    this.ingredients = ingredients;
   }
 }

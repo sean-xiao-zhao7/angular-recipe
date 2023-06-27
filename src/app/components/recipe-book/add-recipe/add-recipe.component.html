@@ -1,0 +1,9 @@
+<form #form="ngForm" (ngSubmit)="onAddRecipe(form.value)">
+  <label for="name">Recipe name</label>
+  <input type="text" name="name" id="name" />
+  <label for="description">Recipe name</label>
+  <input type="textarea" name="description" id="description" />
+  <label for="imageUrl">Image URL</label>
+  <input type="text" name="imageUrl" id="imageUrl" />
+  <button type="submit">Add</button>
+</form>

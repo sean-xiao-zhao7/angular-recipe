@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { RecipeListComponent } from './components/recipe-book/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './components/recipe-book/recipe-item/recipe-item.component';
@@ -13,6 +14,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { MyIngredientsComponent } from './components/inventory/my-ingredients/my-ingredients.component';
 import { MyIngredientItemComponent } from './components/inventory/my-ingredient-item/my-ingredient-item.component';
+import { AddRecipeComponent } from './components/recipe-book/add-recipe/add-recipe.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,9 @@ import { MyIngredientItemComponent } from './components/inventory/my-ingredient-
     NavBarComponent,
     MyIngredientsComponent,
     MyIngredientItemComponent,
+    AddRecipeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
