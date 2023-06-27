@@ -6,4 +6,6 @@
       <app-recipe-item [recipe]="recipe"></app-recipe-item>
     </li>
   </ul>
+  <button (click)="onAddNew()" *ngIf="!addNew">Add a new recipe</button>
+  <app-add-recipe *ngIf="addNew"></app-add-recipe>
 </div>

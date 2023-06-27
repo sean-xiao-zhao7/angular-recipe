@@ -8,6 +8,11 @@ import { Recipe } from 'src/app/models/recipe';
 })
 export class RecipeListComponent implements OnInit {
   @Input() myRecipes: Recipe[] = [];
+  addNew: boolean = false;
 
   ngOnInit(): void {}
+
+  onAddNew() {
+    this.addNew = true;
+  }
 }
