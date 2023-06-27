@@ -38,7 +38,6 @@ export class AppComponent {
       (ingredient) => ingredient.name === ingredientName
     );
     this.myIngredients.splice(target, 1);
-    this.section = 'shop';
   }
 
   onAddMyRecipe(recipe: Recipe) {}

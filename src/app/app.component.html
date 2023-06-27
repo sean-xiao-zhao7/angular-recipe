@@ -14,6 +14,7 @@
         <app-my-ingredients
           [myIngredients]="myIngredients"
           *ngIf="section === 'inventory'"
+          (onRemoveIngredientEE)="onRemoveMyIngredient($event)"
         ></app-my-ingredients>
         <app-recipe-list
           [myRecipes]="myRecipes"
