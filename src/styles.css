@@ -23,6 +23,8 @@ button:hover {
 ul {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-row-gap: 1rem;
 }
 
 li {
