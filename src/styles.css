@@ -30,3 +30,10 @@ ul {
 li {
   list-style: none;
 }
+
+/* custom classes/ids */
+div.container {
+  padding: 1rem;
+  border: solid 1px rgb(221, 221, 221);
+  background-color: whitesmoke;
+}

@@ -17,6 +17,7 @@
     <app-add-recipe
       *ngIf="addNew"
       (addRecipeEmitter)="onAddRecipe($event)"
+      [myIngredients]="myIngredients"
     ></app-add-recipe>
   </div>
 </div>
