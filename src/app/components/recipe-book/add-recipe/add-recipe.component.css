@@ -1,1 +1,6 @@
-
+form {
+  display: grid;
+  grid-row-gap: 1rem;
+  width: 50%;
+  margin: 0 auto;
+}
