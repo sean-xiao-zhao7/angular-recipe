@@ -18,6 +18,7 @@
         ></app-my-ingredients>
         <app-recipe-list
           [myRecipes]="myRecipes"
+          [myIngredients]="myIngredients"
           *ngIf="section === 'recipe-book'"
           (newRecipeEmitter)="onAddMyRecipe($event)"
         ></app-recipe-list>

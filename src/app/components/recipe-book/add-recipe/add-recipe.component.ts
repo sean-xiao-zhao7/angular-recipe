@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Ingredient } from 'src/app/models/ingredient';
 import { Recipe } from 'src/app/models/recipe';
 
 @Component({
@@ -8,6 +9,7 @@ import { Recipe } from 'src/app/models/recipe';
   styleUrls: ['./add-recipe.component.css'],
 })
 export class AddRecipeComponent implements OnInit {
+  @Input() myIngredients: Ingredient[] = [];
   @Output() addRecipeEmitter = new EventEmitter<Recipe>();
   name = new FormControl('');
   description = new FormControl('');

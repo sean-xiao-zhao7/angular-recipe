@@ -1,12 +1,18 @@
 <div>
   <h2>My recipes</h2>
+  <p *ngIf="myIngredients.length <= 0">
+    You must add at least one ingredient before adding a recipe.
+  </p>
   <p *ngIf="myRecipes.length <= 0">No recipes.</p>
   <ul else>
     <li *ngFor="let recipe of myRecipes">
-      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+      <app-recipe-item
+        [recipe]="recipe"
+        [myIngredients]="myIngredients"
+      ></app-recipe-item>
     </li>
   </ul>
-  <div id="add-new-recipe">
+  <div id="add-new-recipe" *ngIf="myIngredients.length > 0">
     <button (click)="onAddNew()" *ngIf="!addNew">Add a new recipe</button>
     <app-add-recipe
       *ngIf="addNew"

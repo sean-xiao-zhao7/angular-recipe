@@ -9,7 +9,7 @@ import { Recipe } from 'src/app/models/recipe';
 })
 export class RecipeItemDetailsComponent implements OnInit {
   @Input() recipe!: Recipe;
-  @Input() ingredients: Ingredient[] = [];
+  @Input() myIngredients: Ingredient[] = [];
   IsAddIngredient: boolean = false;
 
   ngOnInit(): void {}
