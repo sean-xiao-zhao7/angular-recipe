@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Ingredient } from 'src/app/models/ingredient';
 import { Recipe } from 'src/app/models/recipe';
 
 @Component({
@@ -8,6 +9,12 @@ import { Recipe } from 'src/app/models/recipe';
 })
 export class RecipeItemDetailsComponent implements OnInit {
   @Input() recipe!: Recipe;
+  @Input() ingredients: Ingredient[] = [];
+  IsAddIngredient: boolean = false;
 
   ngOnInit(): void {}
+
+  onAddIngredient() {
+    this.IsAddIngredient = !this.IsAddIngredient;
+  }
 }

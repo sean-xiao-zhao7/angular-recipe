@@ -2,4 +2,12 @@
   <h3>{{ recipe.name }}</h3>
   <p>{{ recipe.longDescription }}</p>
   <p>{{ recipe.imageUrl }}</p>
+  <div class="add-ingredients">
+    <button (click)="onAddIngredient()">Add an ingredient</button>
+    <select name="ingredients" id="ingredients" *ngIf="IsAddIngredient">
+      <option *ngFor="let ingredient of ingredients" value="ingredient.name">
+        {{ ingredient.name }}
+      </option>
+    </select>
+  </div>
 </div>
