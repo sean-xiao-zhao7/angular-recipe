@@ -14,12 +14,14 @@ export class AddRecipeComponent implements OnInit {
   name = new FormControl('');
   description = new FormControl('');
   imageUrl = new FormControl('');
+  ingredients = new FormControl();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   onAddRecipe() {
+    console.log(this.ingredients.value);
     const recipe = new Recipe(
       this.name.value,
       this.description.value,

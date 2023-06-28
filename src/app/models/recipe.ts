@@ -11,4 +11,8 @@ export class Recipe {
     this.longDescription = longDescription;
     this.imageUrl = imageUrl;
   }
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 }

@@ -13,9 +13,7 @@ export class RecipeListComponent implements OnInit {
   @Output() newRecipeEmitter = new EventEmitter<Recipe>();
   addNew: boolean = false;
 
-  ngOnInit(): void {
-    console.log(this.myIngredients);
-  }
+  ngOnInit(): void {}
 
   onAddNew() {
     this.addNew = true;

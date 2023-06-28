@@ -13,7 +13,12 @@
     <input type="text" name="imageUrl" id="imageUrl" [formControl]="imageUrl" />
     <div *ngFor="let ingredient of myIngredients">
       <label for="ingredient1">{{ ingredient.name }}</label>
-      <input type="checkbox" name="ingredient1" id="ingredient1" />
+      <input
+        type="checkbox"
+        name="{{ ingredient.name }}"
+        id="{{ ingredient.name }}"
+        [formControl]="ingredients"
+      />
     </div>
     <button type="submit">Add</button>
   </form>
