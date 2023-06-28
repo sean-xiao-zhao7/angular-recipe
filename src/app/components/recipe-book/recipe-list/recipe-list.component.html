@@ -6,9 +6,11 @@
       <app-recipe-item [recipe]="recipe"></app-recipe-item>
     </li>
   </ul>
-  <button (click)="onAddNew()" *ngIf="!addNew">Add a new recipe</button>
-  <app-add-recipe
-    *ngIf="addNew"
-    (addRecipeEmitter)="onAddRecipe($event)"
-  ></app-add-recipe>
+  <div id="add-new-recipe">
+    <button (click)="onAddNew()" *ngIf="!addNew">Add a new recipe</button>
+    <app-add-recipe
+      *ngIf="addNew"
+      (addRecipeEmitter)="onAddRecipe($event)"
+    ></app-add-recipe>
+  </div>
 </div>

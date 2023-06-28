@@ -19,5 +19,6 @@ export class RecipeListComponent implements OnInit {
 
   onAddRecipe(recipe: Recipe) {
     this.newRecipeEmitter.emit(recipe);
+    this.addNew = false;
   }
 }

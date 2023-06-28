@@ -23,6 +23,9 @@ export class AddRecipeComponent implements OnInit {
       this.description.value,
       this.imageUrl.value
     );
+    this.name.reset();
+    this.description.reset();
+    this.imageUrl.reset();
     this.addRecipeEmitter.emit(recipe);
   }
 }
