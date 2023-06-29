@@ -37,3 +37,7 @@ div.container {
   border: solid 1px rgb(221, 221, 221);
   background-color: whitesmoke;
 }
+
+.open {
+  display: block;
+}
