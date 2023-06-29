@@ -16,6 +16,7 @@ import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { MyIngredientsComponent } from './components/inventory/my-ingredients/my-ingredients.component';
 import { MyIngredientItemComponent } from './components/inventory/my-ingredient-item/my-ingredient-item.component';
 import { AddRecipeComponent } from './components/recipe-book/add-recipe/add-recipe.component';
+import { DropdownDirective } from './directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AddRecipeComponent } from './components/recipe-book/add-recipe/add-reci
     MyIngredientsComponent,
     MyIngredientItemComponent,
     AddRecipeComponent,
+    DropdownDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
