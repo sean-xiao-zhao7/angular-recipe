@@ -21,7 +21,6 @@ export class AddRecipeComponent implements OnInit {
   ngOnInit(): void {}
 
   onAddRecipe() {
-    console.log(this.ingredients.value);
     const recipe = new Recipe(
       this.name.value,
       this.description.value,

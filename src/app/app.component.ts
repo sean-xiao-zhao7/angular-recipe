@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Ingredient } from './models/ingredient';
-import { Recipe } from './models/recipe';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,6 @@ export class AppComponent {
 
   // user content
   myIngredients: Ingredient[] = [];
-  myRecipes: Recipe[] = [];
 
   // available contents
   allIngredients = [
@@ -37,9 +35,5 @@ export class AppComponent {
       (ingredient) => ingredient.name === ingredientName
     );
     this.myIngredients.splice(target, 1);
-  }
-
-  onAddMyRecipe(recipe: Recipe) {
-    this.myRecipes.push(recipe);
   }
 }
