@@ -1,28 +1,32 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Ingredient } from 'src/app/models/ingredient';
 import { Recipe } from 'src/app/models/recipe';
+import { InventoryService } from 'src/app/services/inventory.service';
 import { RecipeBookService } from 'src/app/services/recipe-book.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
-  providers: [RecipeBookService],
+  providers: [RecipeBookService, InventoryService],
 })
 export class RecipeListComponent implements OnInit {
   myRecipes: Recipe[] = [];
-  @Input() myIngredients: Ingredient[] = [];
+  myIngredients: Ingredient[] = [];
   addNew: boolean = false;
 
-  constructor(private recipeBookService: RecipeBookService) {}
+  constructor(
+    private recipeBookService: RecipeBookService,
+    private inventoryService: InventoryService
+  ) {}
 
   ngOnInit(): void {
     this.myRecipes = this.recipeBookService.getMyRecipes();
+    this.myIngredients = this.inventoryService.getMyIngredients();
   }
 
   onAddNew() {
     this.addNew = true;
-    this.myRecipes = this.recipeBookService.getMyRecipes();
   }
 
   onAddRecipe(recipe: Recipe) {

@@ -10,9 +10,6 @@ export class AppComponent {
   title = 'My Recipes';
   section = 'shop';
 
-  // user content
-  myIngredients: Ingredient[] = [];
-
   // available contents
   allIngredients = [
     new Ingredient('Ingredient 1', '', ''),
@@ -22,18 +19,5 @@ export class AppComponent {
 
   onChangeSection(section: string) {
     this.section = section;
-  }
-
-  onSelectedIngredient(ingredientName: string) {
-    this.myIngredients.push(new Ingredient(ingredientName, '', ''));
-  }
-
-  onAddMyIngredient(ingredient: Ingredient) {}
-
-  onRemoveMyIngredient(ingredientName: string) {
-    const target = this.myIngredients.findIndex(
-      (ingredient) => ingredient.name === ingredientName
-    );
-    this.myIngredients.splice(target, 1);
   }
 }

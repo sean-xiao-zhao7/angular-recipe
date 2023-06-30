@@ -7,19 +7,13 @@
       ></app-header>
       <section class="main-section">
         <app-shop-list
-          (onSelectedIngredientEE)="onSelectedIngredient($event)"
           [ingredients]="allIngredients"
           *ngIf="section === 'shop'"
         ></app-shop-list>
         <app-my-ingredients
-          [myIngredients]="myIngredients"
           *ngIf="section === 'inventory'"
-          (onRemoveIngredientEE)="onRemoveMyIngredient($event)"
         ></app-my-ingredients>
-        <app-recipe-list
-          [myIngredients]="myIngredients"
-          *ngIf="section === 'recipe-book'"
-        ></app-recipe-list>
+        <app-recipe-list *ngIf="section === 'recipe-book'"></app-recipe-list>
       </section>
     </div>
   </div>
