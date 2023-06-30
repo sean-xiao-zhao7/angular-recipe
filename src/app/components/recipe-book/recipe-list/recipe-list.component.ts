@@ -20,8 +20,12 @@ export class RecipeListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.myRecipes = this.recipeBookService.getMyRecipes();
-    this.myIngredients = this.inventoryService.getMyIngredients();
+    this.recipeBookService.myRecipesObs.subscribe((recipes) => {
+      this.myRecipes = recipes;
+    });
+    this.inventoryService.myIngredientsObs.subscribe((ingredients) => {
+      this.myIngredients = ingredients;
+    });
   }
 
   onAddNew() {
@@ -30,7 +34,6 @@ export class RecipeListComponent implements OnInit {
 
   onAddRecipe(recipe: Recipe) {
     this.recipeBookService.addMyRecipe(recipe);
-    this.myRecipes = this.recipeBookService.getMyRecipes();
     this.addNew = false;
   }
 }
