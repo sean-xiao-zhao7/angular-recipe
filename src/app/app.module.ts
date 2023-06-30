@@ -17,6 +17,9 @@ import { MyIngredientsComponent } from './components/inventory/my-ingredients/my
 import { MyIngredientItemComponent } from './components/inventory/my-ingredient-item/my-ingredient-item.component';
 import { AddRecipeComponent } from './components/recipe-book/add-recipe/add-recipe.component';
 import { DropdownDirective } from './directives/dropdown.directive';
+import { InventoryService } from './services/inventory.service';
+import { ShopService } from './services/shop.service';
+import { RecipeBookService } from './services/recipe-book.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
     DropdownDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [InventoryService, ShopService, RecipeBookService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

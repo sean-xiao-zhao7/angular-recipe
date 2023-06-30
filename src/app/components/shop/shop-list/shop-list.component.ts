@@ -7,7 +7,6 @@ import { ShopService } from 'src/app/services/shop.service';
   selector: 'app-shop-list',
   templateUrl: './shop-list.component.html',
   styleUrls: ['./shop-list.component.css'],
-  providers: [InventoryService, ShopService],
 })
 export class ShopListComponent implements OnInit {
   ingredients: Ingredient[] = [];

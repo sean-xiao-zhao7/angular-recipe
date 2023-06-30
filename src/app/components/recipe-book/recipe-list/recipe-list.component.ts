@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ingredient } from 'src/app/models/ingredient';
 import { Recipe } from 'src/app/models/recipe';
 import { InventoryService } from 'src/app/services/inventory.service';
@@ -8,7 +8,6 @@ import { RecipeBookService } from 'src/app/services/recipe-book.service';
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
-  providers: [RecipeBookService, InventoryService],
 })
 export class RecipeListComponent implements OnInit {
   myRecipes: Recipe[] = [];

@@ -12,6 +12,7 @@ export class InventoryService {
 
   selectedIngredient(ingredientName: string) {
     this.myIngredients.push(new Ingredient(ingredientName, '', ''));
+    console.log(this.myIngredients);
     this.myIngredientsBS.next(this.myIngredients);
   }
 

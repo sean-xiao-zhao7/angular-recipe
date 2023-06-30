@@ -6,7 +6,6 @@ import { InventoryService } from 'src/app/services/inventory.service';
   selector: 'app-my-ingredients',
   templateUrl: './my-ingredients.component.html',
   styleUrls: ['./my-ingredients.component.css'],
-  providers: [InventoryService],
 })
 export class MyIngredientsComponent implements OnInit {
   myIngredients: Ingredient[] = [];
@@ -15,7 +14,7 @@ export class MyIngredientsComponent implements OnInit {
 
   ngOnInit(): void {
     this.inventoryService.myIngredientsObs.subscribe((myIngredients) => {
-      console.log('hi');
+      console.log(myIngredients);
       this.myIngredients = myIngredients;
     });
   }
