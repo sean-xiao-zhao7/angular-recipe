@@ -1,16 +1,18 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../models/ingredient';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class InventoryService {
   private myIngredients: Ingredient[] = [];
-  @Output() newIngredientAddedEmitter = new EventEmitter<Boolean>();
+  private myIngredientsBS = new BehaviorSubject<Ingredient[]>([]);
+  myIngredientsObs = this.myIngredientsBS.asObservable();
 
   selectedIngredient(ingredientName: string) {
     this.myIngredients.push(new Ingredient(ingredientName, '', ''));
-    this.newIngredientAddedEmitter.emit(true);
+    this.myIngredientsBS.next(this.myIngredients);
   }
 
   removeMyIngredient(ingredientName: string) {
@@ -18,7 +20,7 @@ export class InventoryService {
       (ingredient) => ingredient.name === ingredientName
     );
     this.myIngredients.splice(target, 1);
-    this.newIngredientAddedEmitter.emit(true);
+    this.myIngredientsBS.next(this.myIngredients);
   }
 
   getMyIngredients() {
