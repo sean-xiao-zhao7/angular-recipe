@@ -14,7 +14,6 @@ export class MyIngredientsComponent implements OnInit {
 
   ngOnInit(): void {
     this.inventoryService.myIngredientsObs.subscribe((myIngredients) => {
-      console.log(myIngredients);
       this.myIngredients = myIngredients;
     });
   }

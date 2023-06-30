@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Ingredient } from '../models/ingredient';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +11,8 @@ export class ShopService {
     new Ingredient('Ingredient 2', '', ''),
     new Ingredient('Ingredient 3', '', ''),
   ];
-
-  constructor() {}
+  private allIngredientsBS = new BehaviorSubject<Ingredient[]>([]);
+  allIngredientsObs = this.allIngredientsBS.asObservable();
 
   getAllIngredients() {
     return this.allIngredients.slice();
