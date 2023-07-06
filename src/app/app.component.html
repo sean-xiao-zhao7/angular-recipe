@@ -6,11 +6,9 @@
         (onChangeSectionEmitter)="onChangeSection($event)"
       ></app-header>
       <section class="main-section">
-        <app-shop-list *ngIf="section === 'shop'"></app-shop-list>
-        <app-my-ingredients
-          *ngIf="section === 'inventory'"
-        ></app-my-ingredients>
-        <app-recipe-list *ngIf="section === 'recipe-book'"></app-recipe-list>
+        <app-shop-list></app-shop-list>
+        <app-my-ingredients></app-my-ingredients>
+        <app-recipe-list></app-recipe-list>
       </section>
     </div>
   </div>

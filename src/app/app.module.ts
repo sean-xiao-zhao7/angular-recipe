@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { RecipeListComponent } from './components/recipe-book/recipe-list/recipe-list.component';
@@ -37,7 +38,13 @@ import { RecipeBookService } from './services/recipe-book.service';
     AddRecipeComponent,
     DropdownDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+  ],
   providers: [InventoryService, ShopService, RecipeBookService],
   bootstrap: [AppComponent],
 })
