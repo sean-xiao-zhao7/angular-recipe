@@ -17,6 +17,14 @@ const routes: Routes = [
     path: 'recipe-book',
     component: RecipeListComponent,
   },
+  {
+    path: 'shop',
+    component: ShopListComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
