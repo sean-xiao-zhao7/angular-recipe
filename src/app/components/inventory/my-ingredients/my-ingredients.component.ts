@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Ingredient } from 'src/app/models/ingredient';
 import { InventoryService } from 'src/app/services/inventory.service';
 
@@ -7,15 +7,22 @@ import { InventoryService } from 'src/app/services/inventory.service';
   templateUrl: './my-ingredients.component.html',
   styleUrls: ['./my-ingredients.component.css'],
 })
-export class MyIngredientsComponent implements OnInit {
+export class MyIngredientsComponent implements OnInit, OnDestroy {
   myIngredients: Ingredient[] = [];
+  myIngredientsObsSub: any;
 
   constructor(private inventoryService: InventoryService) {}
 
   ngOnInit(): void {
-    this.inventoryService.myIngredientsObs.subscribe((myIngredients) => {
-      this.myIngredients = myIngredients;
-    });
+    this.myIngredientsObsSub = this.inventoryService.myIngredientsObs.subscribe(
+      (myIngredients) => {
+        this.myIngredients = myIngredients;
+      }
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.myIngredientsObsSub.unsubscribe();
   }
 
   onRemoveIngredient(ingredientName: string) {
